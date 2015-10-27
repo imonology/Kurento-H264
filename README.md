@@ -1,8 +1,16 @@
 # Kurento-H264
 creating end-to-end connection from RTSP source to Firefox H264 WebRTC
 
+# Goals
+1. Develop the demonstrator for a H.264-only Kurento pipeline using GKB IPcam as RTSP source
+	
+# IPcam Access
+rtsp://163.22.32.118/live1.sdp
+rtsp://163.22.32.62/live1.sdp
+rtsp://140.109.221.238/live1.sdp	
+	
 
-# Requirements 
+# Requirements (holistic view)
 
 1. our video sources are:
    * IP cam (H.264 encoded RTSP streams)
@@ -22,11 +30,23 @@ Our goal is to achieve the above by end of this year, and our prototype can now 
 
 The main performance bottleneck identified so far is the trans-coding from H.264 to VP8 format (for live-view, record, and playback).
 
-Luis has summarized our requirements as follow, which is correct, though due to budget & time constrain, we'd like to focus on the first three first:
+Luis's summary of requirements:
 
 1. You have your RTSP/H.264 streams received in real-time at Kurento.
 2. Kurento records those streams in MP4 blocks without any transcoding (I assume audio is coming in PCM format)
 3. Kurento serves those streams through H.264+WebRTC without transcoding to Firefox browsers (audio in PCM, if audio needs to be in Opus, then, transcoding would be necessary for the audio). Chrome might support also this in a few months with high probability.
 4. Kurento provides the capability of playing pre-recorderd files with pause and fast ff/bw functions. This requires transcoding (one transcoding per stream being viewed).
 
-So the goal we'd like to achieve with the consultant is to develop the demonstrator for this H.264-only Kurento pipeline. 
+# Contacts
+Mo-Che (MC):
+skype: chryslerwrangler
+phone: +886-921541878
+
+Matthew (BlueT):
+skype: bluet_dot_org
+phone: +886-953033076
+
+Shun-Yun (SY):
+skype: shunyunhu
+mail: syhu@imonology.com
+phone: +886-925097273
