@@ -2,11 +2,16 @@
 creating end-to-end connection from RTSP source to Firefox H264 WebRTC
 
 # Goals
+
 1. Develop the demonstrator for a H.264-only Kurento pipeline using GKB IPcam as RTSP source
 	
+	
 # IPcam Access
+	
 rtsp://163.22.32.118/live1.sdp
+	
 rtsp://163.22.32.62/live1.sdp
+	
 rtsp://140.109.221.238/live1.sdp	
 	
 
