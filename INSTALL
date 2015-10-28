@@ -1,0 +1,14 @@
+1. Install Kurento. Follow https://github.com/Kurento/kurento-media-server/blob/master/README.md
+  echo "deb http://ubuntu.kurento.org trusty kms6" | sudo tee /etc/apt/sources.list.d/kurento.list
+  wget -O - http://ubuntu.kurento.org/kurento.gpg.key | sudo apt-key add -
+  sudo apt-get update
+  sudo apt-get install kurento-server
+
+2. clone the repo
+  git clone git@github.com:imonology/Kurento-H264.git
+
+3. run `npm install` and `npm run postinstall` in Kurento-H264
+
+4. Start server `node server.js`
+
+5. Open http://localhost:8080/ with Firefox
