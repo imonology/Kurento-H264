@@ -220,7 +220,9 @@ function createMediaElements(pipeline, ws, callback) {
         // we use 'useEncodedMedia' to avoid transconding in the input of the pipeline
         // On this way, playerendpoint push media in the same format that the feed
         // provides it instead of RAW format.
-        var options = {uri : 'rtsp://163.22.32.118/live1.sdp', useEncodedMedia: true}
+        //var options = {uri : 'rtsp://163.22.32.118/live1.sdp', useEncodedMedia: true}
+        var path = "file:///"+__dirname + "/test.mkv"
+        var options = {uri : path, useEncodedMedia: true}
 
         pipeline.create('PlayerEndpoint', options, function(error, playerEndpoint) {
             if (error) {
