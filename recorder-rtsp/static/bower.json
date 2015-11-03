@@ -1,0 +1,25 @@
+{
+  "name": "recorder-rtsp",
+  "description": "Recorder rtsp demo",
+  "authors": [
+  ],
+  "main": "index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "adapter.js": "*",
+    "bootstrap": "~3.3.0",
+    "ekko-lightbox": "~3.3.0",
+    "demo-console": "master",
+    "kurento-utils": "master"
+  }
+}
