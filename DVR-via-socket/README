@@ -1,0 +1,7 @@
+DVR TS socket server.
+
+Usage:
+
+	nodejs test/connect_stream_tosocket.js
+
+	default setting: 127.0.0.1:50001
