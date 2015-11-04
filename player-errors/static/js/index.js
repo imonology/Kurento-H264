@@ -32,6 +32,9 @@ ws.onmessage = function(message) {
 	case 'playerError':
 		console.log ("Error detected in playerEndpoint ", parsedMessage.data)
 		break;
+	case 'webRtcEndpoint_disconnected':
+		console.log ("WebRtcEndpoint disconnected")
+		break;
 	case 'error':
 		if (state == I_AM_STARTING) {
 			setState(I_CAN_START);

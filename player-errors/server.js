@@ -105,9 +105,14 @@ wss.on('connection', function(ws) {
                             data : data
                         }));
                         break;
-                     case 'playerEOS':
+                    case 'playerEOS':
                         ws.send(JSON.stringify({
                             id : 'playerEOS',
+                        }));
+                        break;
+                    case 'webRtcEndpoint':
+                        ws.send(JSON.stringify({
+                            id : 'webRtcEndpoint_disconnected',
                         }));
                         break;
                 }
@@ -214,6 +219,14 @@ function start(sessionId, ws, sdpOffer, callback) {
                     webRtcEndpoint.gatherCandidates(function(error) {
                         if (error) {
                             return callback(error);
+                        }
+                    });
+
+
+                    webRtcEndpoint.on ('MediaStateChanged' , function (data){
+                        if (data.newState == 'DISCONNECTED') {
+                            console.info ("WebRtcEndpoint disconnection detected");
+                            return callback(null, 'webRtcEndpoint', null);
                         }
                     });
 
